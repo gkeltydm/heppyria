@@ -4,41 +4,109 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heppy Ria</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <img src="https://i.postimg.cc/63dd7BJ7/IMG-20230603-193150-179.jpg" alt="profile" />
-        <h3>Glenn Kelty David Manurung</h3>
-        <img src="https://i.postimg.cc/23KxmThr/facebook-1.png" alt="facebook-logo" />
-        <img src="https://i.postimg.cc/F7kVKcVc/github-1.png" alt="github-logo" />
-        <img src="https://i.postimg.cc/xXryNC6Z/instagram-1.png" alt="instagram-logo" />
-        <br /><img src="https://i.postimg.cc/3WRZPzyt/home.png" alt="home-logo" />
-        <p>Home</p>
-        <img src="https://i.postimg.cc/zHVSKRms/profile.png" alt="about-logo" />
-        <p>About</p>
-      </nav>
+    <header id="header">
+      <div class="container">
+        <div class="profile">
+          <img src="profil.jpg" alt="profile" />
+          <h1><a href="index.html">Glenn Kelty</a></h1>
+          <h1><a href="index.html">David Manurung</a></h1>
+        </div>
+        <div class="contact">
+          <a href="https://www.facebook.com/glennkeltydavid.manurung"
+            ><img class="contact-logo" src="https://i.postimg.cc/23KxmThr/facebook-1.png" alt="facebook-logo"
+          /></a>
+          <a href="https://github.com/gkeltydm"
+            ><img class="contact-logo" src="https://i.postimg.cc/F7kVKcVc/github-1.png" alt="github-logo"
+          /></a>
+          <a href="https://www.instagram.com/gkelty.dm/?utm_medium=copy_link"
+            ><img class="contact-logo" src="https://i.postimg.cc/xXryNC6Z/instagram-1.png" alt="instagram-logo"
+          /></a>
+        </div>
+        <nav class="nav">
+          <div class="selection">
+            <table>
+              <tr>
+                <td>
+                  <a href="#hero"><img src="https://i.postimg.cc/3WRZPzyt/home.png" alt="home-logo" /> </a>
+                </td>
+                <td>
+                  <a href="#hero"><p>Home</p></a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#about"><img src="https://i.postimg.cc/zHVSKRms/profile.png" alt="about-logo" /> </a>
+                </td>
+                <td>
+                  <a href="#about"><p>About</p></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </nav>
+      </div>
     </header>
-    <main>
-      <img src="https://i.postimg.cc/bYtcdMBQ/bg.jpg" alt="background" />
-      <h1>Glenn Kelty David Manurung</h1>
-      <p>I'm Heppy</p>
-      <h2>About</h2>
-      <p>
-        Hello, everyone! I am a student of Universitas Negeri Medan (UNIMED), specifically in the Department of Computer Science, class of
-        2022. I am highly enthusiastic about pursuing a career in the field of IT and utilizing the knowledge I acquire on campus to achieve
-        this goal.
-      </p>
-      <img src="https://i.postimg.cc/63dd7BJ7/IMG-20230603-193150-179.jpg" alt="profile" />
-      <h2>College Student</h2>
-      <p>This My Profile</p>
-      <p><b>Name : </b>Glenn Kelty David Manurung</p>
-      <p><b>City : </b>Batam, Kepulauan Riau</p>
-      <p><b>University : </b>Medan State University</p>
-      <p><b>Hobby : </b>Music, Games</p>
-      <p>Call me Glenn. Nice to meet you all!</p>
+    <section id="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>Glenn Kelty</h1>
+          <h1>David Manurung</h1>
+          <p>I'm Heppy</p>
+        </div>
+      </div>
+    </section>
+    >D
+
+    <main id="main">
+      <section id="about" class="about">
+        <div class="container-about">
+          <div class="section-title">
+            <h2>About</h2>
+            <p>
+              Hello, everyone! I am a student of Universitas Negeri Medan (UNIMED), specifically in the Department of Computer Science,
+              class of 2022. I am highly enthusiastic about pursuing a career in the field of IT and utilizing the knowledge I acquire on
+              campus to achieve this goal.
+            </p>
+          </div>
+          <div class="row">
+            <div>
+              <img src="profil.jpg" alt="profile" />
+            </div>
+            <div class="about-contain">
+              <h2>College Student</h2>
+              <p class="italic">This My Profile</p>
+              <div class="row">
+                <div>
+                  <ul>
+                    <li>
+                      <p><b>Name : </b>Glenn Kelty David Manurung</p>
+                    </li>
+                    <li>
+                      <p><b>City : </b>Batam, Kepulauan Riau</p>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <p><b>University : </b>Medan State University</p>
+                    </li>
+                    <li>
+                      <p><b>Hobby : </b>Music, Games</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p>Call me Glenn. Nice to meet you all!</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
+    <footer id="footer">
       <p>Gmail : gkelty.dm@gmail.com</p>
     </footer>
   </body>
