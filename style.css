@@ -1,4 +1,9 @@
-html { scroll-behavior: smooth; }
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -14,10 +19,9 @@ body {
   position: fixed;
   width: 300px;
   top: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   background-color: rgba(4, 11, 20, 1);
-  overflow-y: auto;
 }
 
 #header .profile img {
@@ -167,8 +171,8 @@ body {
   justify-content: space-between;
   flex-direction: column;
   position: fixed;
-  top: 5%;
-  right: 50px;
+  top: 10px;
+  right: 15px;
 }
 
 #hero .tombol input {
@@ -219,7 +223,11 @@ body {
   }
 
   #main .about .container-about {
-    padding-left: 80px;
+    padding-left: 10px;
+  }
+
+  #main .about .row .about-contain {
+    padding-left: 0px;
   }
 
   #main .row {
@@ -229,7 +237,7 @@ body {
   }
 
   #hero .hero-container {
-    padding-left: 70px;
+    padding-left: 0px;
   }
 
   #hero .tombol {
@@ -237,18 +245,24 @@ body {
   }
 
   #main .row img {
-    width: 600px;
-    padding-left: 10px;
+    width: 100%;
   }
 
   #hero .hero-container .hero-content h1,
   #hero .hero-container .hero-content p {
     margin-left: 30px;
   }
+
+  #hero .container-about .row .foto {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 425px) {
-  #header .container {
+  /*#header .container {
     transform: translateX(-100%);
   }
 
@@ -295,9 +309,16 @@ body {
   #hero .hero-container .hero-content p {
     margin-left: 30px;
   }
+*/
+  #hero .hero-container .hero-content h1 {
+    font-size: 30px;
+  }
+  #hero .hero-container .hero-content p {
+    font-size: 20px;
+  }
 }
 
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
   #header .container {
     transform: translateX(-100%);
   }
@@ -345,6 +366,8 @@ body {
   #hero .hero-container .hero-content p {
     margin-left: 30px;
   }
+
+
 }
 
 @media screen and (max-width: 320px) {
@@ -395,4 +418,4 @@ body {
   #hero .hero-container .hero-content p {
     margin-left: 30px;
   }
-}
+} */
