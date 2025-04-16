@@ -12,8 +12,10 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  position: relative;
 }
 
+/* Header/Sidebar Styles */
 #header .container {
   box-sizing: border-box;
   position: fixed;
@@ -22,6 +24,9 @@ body {
   bottom: 0;
   left: 0;
   background-color: rgba(4, 11, 20, 1);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 #header .profile img {
@@ -35,13 +40,14 @@ body {
 #header .profile h1 {
   font-size: 25px;
   margin: 0;
-  text-align-last: center;
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 #header .profile h1 a {
   color: white;
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
 }
 
 #header .contact {
@@ -55,8 +61,12 @@ body {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+#header .contact img:hover {
+  transform: scale(1.1);
 }
 
 #header .nav .selection {
@@ -65,12 +75,7 @@ body {
 }
 
 #header .nav .selection td {
-  color: rgba(4, 11, 20, 1);
   padding-left: 8px;
-}
-
-#header .nav .selection p {
-  font-size: 17px;
 }
 
 #header .selection img {
@@ -83,8 +88,15 @@ body {
 #header .selection p {
   color: white;
   font-size: 15px;
+  margin: 0;
+  transition: color 0.3s ease;
 }
 
+#header .selection a:hover p {
+  color: #4e9af1;
+}
+
+/* Hero Section */
 #hero .hero-container {
   width: 100vw;
   height: 100vh;
@@ -96,57 +108,67 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+}
+
+#hero .hero-container .hero-content {
+  padding: 20px;
 }
 
 #hero .hero-container .hero-content h1 {
   font-size: 5vw;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   font-family: "Raleway", sans-serif;
+  color: #fff;
+  line-height: 1.2;
 }
 
 #hero .hero-container .hero-content p {
   font-size: 3vw;
   margin-top: 15px;
   font-family: "Poppins", sans-serif;
-}
-
-#hero .hero-container .hero-content h1,
-#hero .hero-container .hero-content p {
-  margin-left: 100px;
   color: #fff;
 }
 
-#main .about .container-about {
+/* Main Content Sections */
+#main .container-about {
   padding-left: 320px;
   box-sizing: border-box;
   width: 90%;
+  margin: 0 auto;
 }
 
-#main .section-title {
+.section-title {
   width: 100%;
 }
 
-#main .section-title h2 {
+.section-title h2 {
   color: #173b6c;
   margin-top: 60px;
   font-size: 32px;
   font-family: "Raleway", sans-serif;
 }
 
-#main .section-title p {
+.section-title p {
   text-align: justify;
   margin-bottom: 30px;
-  margin-top: 40px;
+  margin-top: 20px;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* About Section */
 #main .row {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 #main .row img {
   width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 #main .row h2 {
@@ -156,227 +178,202 @@ body {
   margin-bottom: 8px;
 }
 
-#main .row .italic {
+.italic {
   font-style: italic;
   margin-bottom: 16px;
+  color: #6c757d;
 }
 
-#main .about .row .about-contain {
-  padding-left: 30px;
+.about-contain {
+  flex: 1;
+  min-width: 300px;
 }
 
-#hero .tombol {
+.list ul {
+  padding-left: 20px;
+}
+
+.list li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.list b {
+  color: #173b6c;
+}
+
+/* Skills Section */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.skill-item {
+  flex: 1;
+  min-width: 250px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skill-item h3 {
+  color: #173b6c;
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+}
+
+.skill-item ul {
+  padding-left: 20px;
+}
+
+.skill-item li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Experience Section */
+.experience-item {
+  margin-bottom: 40px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.experience-item h3 {
+  color: #173b6c;
+  margin-bottom: 5px;
+  font-family: "Raleway", sans-serif;
+}
+
+.experience-date {
+  color: #6c757d;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.experience-item ul {
+  padding-left: 20px;
+}
+
+.experience-item li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Interests Section */
+.interests-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.interest-item {
+  flex: 1;
+  min-width: 250px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.interest-item h3 {
+  color: #173b6c;
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+}
+
+.interest-item p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hamburger Menu */
+.tombol {
   display: none;
   height: 20px;
   justify-content: space-between;
   flex-direction: column;
   position: fixed;
-  top: 10px;
-  right: 15px;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  cursor: pointer;
 }
 
-#hero .tombol input {
+.tombol input {
   position: absolute;
   width: 40px;
   height: 28px;
   opacity: 0;
   left: -6px;
   z-index: 2;
+  cursor: pointer;
 }
 
-#hero .tombol span {
+.tombol span {
   display: block;
   border-radius: 5px;
   width: 28px;
   height: 3px;
-  background-color: #173b6c;
+  background-color: #fff;
   transition: 0.5s;
+  position: relative;
 }
 
-#hero .tombol span:nth-child(2) {
+.tombol span:nth-child(2) {
   transform-origin: 0 0;
 }
 
-#hero .tombol span:nth-child(4) {
+.tombol span:nth-child(4) {
   transform-origin: 0 100%;
 }
 
-#hero .tombol input:checked ~ span:nth-child(2) {
+.tombol input:checked ~ span:nth-child(2) {
   transform: rotate(45deg) translate(-1px, -1px);
+  background-color: #173b6c;
 }
 
-#hero .tombol input:checked ~ span:nth-child(4) {
-  transform: rotate(-45deg) translate(-1px, -1px);
+.tombol input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+  background-color: #173b6c;
 }
 
-#hero .tombol input:checked ~ span:nth-child(3) {
+.tombol input:checked ~ span:nth-child(3) {
   transform: scale(0);
 }
 
+/* Overlay for mobile */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  display: none;
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
   #header .container {
     transform: translateX(-100%);
+    width: 250px;
   }
 
   #header .slide {
     transform: translateX(0);
   }
 
-  #main .about .container-about {
-    padding-left: 10px;
-  }
-
-  #main .about .row .about-contain {
-    padding-left: 0px;
-  }
-
-  #main .row {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-  }
-
-  #hero .hero-container {
-    padding-left: 0px;
-  }
-
-  #hero .tombol {
-    display: flex;
-  }
-
-  #main .row img {
-    width: 100%;
-  }
-
-  #hero .hero-container .hero-content h1,
-  #hero .hero-container .hero-content p {
-    margin-left: 30px;
-  }
-
-  #hero .container-about .row .foto {
-    /* width: 100%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  /*#header .container {
-    transform: translateX(-100%);
-  }
-
-  #header .slide {
-    transform: translateX(0);
-  }
-
-  #hero .hero-container .hero-content h1 {
-    font-size: 7vw;
-  }
-
-  #hero .hero-container .hero-content p {
-    font-size: 5vw;
-  }
-
-  #main .about .container-about {
-    padding-left: 40px;
-  }
-
-  #main .about .container-about .row .about-contain {
-    padding-left: 5px;
-  }
-
-  #main .row {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-  }
-
-  #hero .hero-container {
-    padding-left: 15px;
-  }
-
-  #hero .tombol {
-    display: flex;
-  }
-
-  #main .row img {
-    width: 350px;
-    padding-left: 0px;
-  }
-
-  #hero .hero-container .hero-content h1,
-  #hero .hero-container .hero-content p {
-    margin-left: 30px;
-  }
-*/
-  #hero .hero-container .hero-content h1 {
-    font-size: 30px;
-  }
-  #hero .hero-container .hero-content p {
-    font-size: 20px;
-  }
-}
-
-/* @media screen and (max-width: 375px) {
-  #header .container {
-    transform: translateX(-100%);
-  }
-
-  #header .slide {
-    transform: translateX(0);
-  }
-
-  #hero .hero-container .hero-content h1 {
-    font-size: 7vw;
-  }
-
-  #hero .hero-container .hero-content p {
-    font-size: 5vw;
-  }
-
-  #main .about .container-about {
-    padding-left: 40px;
-  }
-
-  #main .about .container-about .row .about-contain {
-    padding-left: 5px;
-  }
-
-  #main .row {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-  }
-
-  #hero .hero-container {
-    padding-left: 10px;
-  }
-
-  #hero .tombol {
-    display: flex;
-  }
-
-  #main .row img {
-    width: 300px;
-    padding-left: 0px;
-  }
-
-  #hero .hero-container .hero-content h1,
-  #hero .hero-container .hero-content p {
-    margin-left: 30px;
-  }
-
-
-}
-
-@media screen and (max-width: 320px) {
-  #header .container {
-    transform: translateX(-100%);
-  }
-
-  #header .slide {
-    transform: translateX(0);
+  #hero .hero-container,
+  #main .container-about {
+    padding-left: 20px;
+    width: calc(100% - 40px);
   }
 
   #hero .hero-container .hero-content h1 {
@@ -384,38 +381,37 @@ body {
   }
 
   #hero .hero-container .hero-content p {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 
-  #main .about .container-about {
-    padding-left: 40px;
-  }
-
-  #main .about .container-about .row .about-contain {
-    padding-left: 5px;
-  }
-
-  #main .row {
+  .tombol {
     display: flex;
-    flex-direction: column;
-    justify-items: center;
   }
 
-  #hero .hero-container {
-    padding-left: 5px;
+  body.sidebar-open {
+    overflow: hidden;
   }
 
-  #hero .tombol {
-    display: flex;
+  body.sidebar-open .overlay {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #hero .hero-container .hero-content h1 {
+    font-size: 30px;
+  }
+  
+  #hero .hero-container .hero-content p {
+    font-size: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
   }
 
   #main .row img {
-    width: 250px;
-    padding-left: 0px;
+    width: 100%;
   }
-
-  #hero .hero-container .hero-content h1,
-  #hero .hero-container .hero-content p {
-    margin-left: 30px;
-  }
-} */
+  
+}
